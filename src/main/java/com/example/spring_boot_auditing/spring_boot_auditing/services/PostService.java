@@ -11,4 +11,6 @@ public interface PostService {
     PostDTO createNewPost(PostDTO postDTO);
 
     PostDTO getPostById(Long id);
+
+    PostDTO updatePost(PostDTO inputPost, Long postId);
 }

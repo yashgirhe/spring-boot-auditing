@@ -25,12 +25,17 @@ public class PostController {
     }
 
     @PostMapping
-    public PostDTO createNewPost(@RequestBody PostDTO inputPost){
+    public PostDTO createNewPost(@RequestBody PostDTO inputPost) {
         return postService.createNewPost(inputPost);
     }
 
-    @PutMapping("/{postId}")
-    public PostDTO updatePost(@RequestBody PostDTO inputPost, @PathVariable Long postId){
-        return postService.updatePost(inputPost, postId);
+    @PutMapping("/{id}")
+    public PostDTO updatePost(@RequestBody PostDTO inputPost, @PathVariable Long id) {
+        return postService.updatePost(inputPost, id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletePost(@PathVariable Long id) {
+        postService.deletePost(id);
     }
 }

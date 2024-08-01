@@ -47,4 +47,9 @@ public class PostServiceImpl implements PostService {
         PostEntity savedPostEntity = postRepository.save(existingPost);
         return modelMapper.map(savedPostEntity, PostDTO.class);
     }
+
+    @Override
+    public void deletePost(Long id) {
+        postRepository.deleteById(id);
+    }
 }

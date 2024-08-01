@@ -5,13 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.envers.Audited;
 
+//@Audited will audit all the fields in given entity
+//@NotAudited will exclude fields
 @Entity
 @Table(name = "posts")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
+@Audited
 public class PostEntity extends AuditableEntity {
 
     @Id

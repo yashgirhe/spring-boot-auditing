@@ -1,4 +1,4 @@
-![Auditing](https://github.com/user-attachments/assets/5f69a600-a6cd-4bcf-bafd-8a70c4423813)
+![Auditing](https://github.com/user-attachments/assets/b2df6268-3f14-464c-90bd-cad2d9f3eb0f)
 # Working of auditing
 
 1.@EntityListeners(AuditingEntityListener.class) annotation in Spring Boot is used to enable auditing features in your entity classes. This annotation is used to specify that a particular class should have its lifecycle events (like creation, update, etc.) listened to by the AuditingEntityListener. This listener provides automatic population of auditing fields such as createdDate, updatedDate, createdBy, and updatedBy.
